@@ -9,6 +9,7 @@ A collection of AI skills for Descript users — interactive sessions you can ru
 | Series | Description | Episodes |
 |--------|-------------|----------|
 | [Ramdy Creator Bootcamp](./ramdy-creator-bootcamp/) | Launch a YouTube channel from scratch, following Ramdy's Creator Bootcamp curriculum | 7 (more coming) |
+| [Podcast Edit](./podcast-edit/) | Turn a Zoom interview recording into a polished audio podcast | 1 |
 
 ---
 
