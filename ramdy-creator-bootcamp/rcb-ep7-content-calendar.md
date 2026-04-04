@@ -211,5 +211,5 @@ Then:
 
 ## Source
 
-Based on the transcript of [Ramdy Creator Bootcamp Episode 7 — "Creating a Content Calendar"](https://www.youtube.com/@ramdy).
+Based on the transcript of [Ramdy Creator Bootcamp Episode 7 — "Creating a Content Calendar"](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S).
 All core advice, philosophy, and framing belongs to Ramdy.

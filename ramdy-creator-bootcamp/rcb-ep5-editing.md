@@ -301,6 +301,6 @@ Descript features used:
 
 ## Source
 
-Based on the transcript of [Ramdy Creator Bootcamp Episode 5 — "Editing Your Video"](https://www.youtube.com/@ramdy).
+Based on the transcript of [Ramdy Creator Bootcamp Episode 5 — "Editing Your Video"](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S).
 All core advice, philosophy, and framing belongs to Ramdy.
 Descript feature references reflect the product as used in the bootcamp; see [Descript's documentation](https://help.descript.com) for the latest.

@@ -150,6 +150,6 @@ Close the session with:
 
 ## Source
 
-Based on the transcript of [Ramdy Creator Bootcamp Episode 1 — "The Question"](https://www.youtube.com/@ramdy).
+Based on the transcript of [Ramdy Creator Bootcamp Episode 1 — "The Question"](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S).
 All core advice, philosophy, and framing belongs to Ramdy.
 This skill is a faithful translation of that content into an interactive AI session.

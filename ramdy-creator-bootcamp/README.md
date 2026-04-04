@@ -1,6 +1,6 @@
 # Ramdy Creator Bootcamp — Skills
 
-A series of AI skills built from [Ramdy's Creator Bootcamp](https://www.youtube.com/@ramdy) — a video series teaching creators everything they need to launch a YouTube channel from scratch.
+A series of AI skills built from [Ramdy's Creator Bootcamp](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S) — a video series teaching creators everything they need to launch a YouTube channel from scratch.
 
 Each skill takes Ramdy's advice from a single episode and turns it into an interactive session you can run with your AI assistant. Together, they walk you from zero to a fully operating channel with a content strategy, visual identity, and Descript-powered editing workflow.
 

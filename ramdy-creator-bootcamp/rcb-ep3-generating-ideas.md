@@ -188,5 +188,5 @@ Daily idea exercise: [committing to it / not right now]
 
 ## Source
 
-Based on the transcript of [Ramdy Creator Bootcamp Episode 3 — "Generating Ideas"](https://www.youtube.com/@ramdy).
+Based on the transcript of [Ramdy Creator Bootcamp Episode 3 — "Generating Ideas"](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S).
 All core advice, philosophy, and framing belongs to Ramdy.

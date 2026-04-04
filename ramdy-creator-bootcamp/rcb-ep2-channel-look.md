@@ -188,5 +188,5 @@ Ramdy's homework phrasing: *"Draft up your visuals, set up your layout, and add 
 
 ## Source
 
-Based on the transcript of [Ramdy Creator Bootcamp Episode 2 — "Channel Look"](https://www.youtube.com/@ramdy).
+Based on the transcript of [Ramdy Creator Bootcamp Episode 2 — "Channel Look"](https://www.youtube.com/playlist?list=PL0SvVPop_Y6zjqTAHCISdMGBQ1jPVv87S).
 All core advice, philosophy, and framing belongs to Ramdy.
