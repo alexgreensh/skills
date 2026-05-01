@@ -1,4 +1,4 @@
-# Blog Post → Social Video (9:16, 30–60s) — V4.0
+# Blor/Article → Social Video (9:16, 30–60s) — V4.0
 
 ---
 
@@ -145,8 +145,8 @@ For any scraped image placed on screen, also create a Veo 3.1 moving version (6-
 
 - Build timeline from the scene map; each scene uses its Veo clip.
 - Default: clean hard cuts.
-- Use short subtle cross-dissolves ONLY where two adjacent shots clash harshly.
-- No stylized transitions, wipes, zooms, or gimmicks.
+- No stylized transitions, wipes, zooms, or gimmicks.  Disable Smart Transitions.
+- Use Crossfade transitions in between every scene.  Set the duration of transition to 350ms.
 
 ---
 
@@ -195,7 +195,7 @@ On the voiceover/script track, add the audio effect "Lower other audio" and set 
 Step 2 — Music track: add Compressor:
 On the music track, add a Compressor effect. Only change the threshold to -30 dB — leave all other parameters at their defaults (Ratio 3:1, Attack 0, Release 0.2, Knee 4). This normalizes the music level regardless of the track's input gain.
 
-Step 3 — Music track: set volume to 30%.
+Step 3 — Music track: set volume to 35%.
 
 Mix check (after all three steps, scan the full timeline):
 - VO is always clear and leading
@@ -208,7 +208,7 @@ Mix check (after all three steps, scan the full timeline):
 
 Verify every item. If any fails, fix before completing:
 
-- No placeholders remain
+- No placeholders remain.  *Be sure to remove any unfilled placeholder layers that remain in the project*
 - Every scene ≤ 8s (SCENE_CAP)
 - No loops or jump cuts in Veo clips
 - No text inside any AI imagery (TEXT_FREE)
