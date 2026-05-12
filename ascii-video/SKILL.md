@@ -1,28 +1,23 @@
+---
+name: ascii-video
+description: Generate colored ASCII art video using a Python renderer and finish in Descript. Choose from 5 templates (music visualizer, intro bumper, social clip, lyric video, product launch), customize the creative brief, render locally, then import to Descript for captions, music, voiceover, and export. Use this skill when creating ASCII art videos, retro-style video content, text-art animations, or stylized video effects.
+---
+
 # ASCII Video — Generate ASCII Art Video and Finish in Descript
 
-**Skill:** `ascii-video`
-**Descript integration:** Full — media import and agent-based editing via Descript API
-**Version:** 1.0
+A coding agent writes a bespoke Python renderer that outputs colored ASCII art as real MP4 video. You pick a template (music visualizer, intro bumper, social clip, lyric video, product launch), answer a few creative questions, and the agent generates the video from scratch. Then you import it into Descript for finishing.
 
----
-
-## What this skill does
-
-A coding agent writes a bespoke Python renderer that outputs colored ASCII art as real MP4 video. You pick a template (music visualizer, intro bumper, social clip, lyric video, product launch), answer a few creative questions, and the agent generates the video from scratch. Then you import it into Descript for finishing — captions, music, voiceover, export.
-
----
+For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
 
 ## Instructions for the AI
 
-You are guiding a creator through generating an ASCII art video and finishing it in Descript. The workflow has two phases: **video generation** (Steps 1-5) and **Descript post-production** (Steps 6-7).
+Guide a creator through generating an ASCII art video and finishing it in Descript. The workflow has two phases: **video generation** (Steps 1-5) and **Descript post-production** (Steps 6-7).
 
-The video generation step involves writing a single-file Python renderer from scratch — this is the core approach. The renderer uses NumPy + Pillow + ffmpeg to render colored ASCII characters as actual video frames. No pre-built templates or binaries — the agent writes the script each time based on the creative brief.
+The video generation step involves writing a single-file Python renderer from scratch. The renderer uses NumPy + Pillow + ffmpeg to render colored ASCII characters as actual video frames. No pre-built templates or binaries.
 
 After rendering, the video is imported into Descript for post-production: captions, music, voiceover, and export.
 
-> The Descript API is early access and actively evolving. This skill describes **intent** — what to do and when. Your MCP connection handles **how**. If anything has changed, [docs.descriptapi.com](https://docs.descriptapi.com/) is the source of truth.
-
-**After every `prompt_project_agent` or `import_media` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` for `"success"` or `"error"` before proceeding.
+**After every `prompt_project_agent` or `import_media` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `references/descript-api.md` for details.
 
 ---
 
@@ -162,31 +157,13 @@ Note any steps that require manual attention in the Descript desktop app (the re
 
 ---
 
-## Known API limitations
+## Limitations
 
-| Limitation | Workaround |
-|-----------|-----------|
-| **No local file upload via API** | Upload to cloud storage, use public URL; or drag-and-drop into Descript desktop app |
-| **No volume ramps / gain envelopes** | Draw manually in Descript desktop app |
-| **Agent is one-shot** | Frame each instruction as a complete, self-contained request |
-| **composition_id is WIP** | Target by `project_id`, describe composition by name in prompt |
-
-These limitations reflect the API as of early 2026. Check [docs.descriptapi.com](https://docs.descriptapi.com/) for the latest capabilities — as the API evolves, some of these workarounds may no longer be necessary.
-
----
-
-## What this skill does NOT do
-
-- Does not ship a pre-built video renderer. The agent writes the Python script each time.
-- Does not play or preview rendered video. The user must watch it to judge visual quality.
-- Does not automate volume envelopes or crossfades in Descript.
-- Does not handle video hosting — the user manages cloud storage for API import.
-- Does not support local file upload via the Descript API (yet).
+- Claude cannot see or preview video. The user must watch renders to judge visual quality.
+- See `references/descript-api.md` for full API limitations and workarounds.
 
 ---
 
 ## Source
 
-> Video generation approach based on the [ASCII Video skill](https://github.com/NousResearch/hermes-agent/tree/main/skills/creative/ascii-video) from [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent). The rendering architecture, effect catalogs, shader system, and single-file Python approach originate from that skill.
->
-> Descript API references reflect the product as of early 2026; see [docs.descriptapi.com](https://docs.descriptapi.com/) for the latest.
+Video generation approach based on the [ASCII Video skill](https://github.com/NousResearch/hermes-agent/tree/main/skills/creative/ascii-video) from [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent).

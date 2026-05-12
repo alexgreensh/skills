@@ -1,28 +1,23 @@
-# Podcast Edit — Turn a Zoom Recording into a Polished Audio Podcast
-
-**Skill:** `podcast-edit`
-**Descript integration:** Full — transcript-based editing, filler word removal, composition assembly via Descript API
-**Version:** 1.0
-
+---
+name: podcast-edit
+description: Turn a Zoom interview recording into a polished audio podcast using Descript. Guides you through transcript-based cleanup, trimming, pull quote selection, timeline assembly, and mixing. Use this skill when editing podcast interviews, cleaning up recorded conversations, assembling podcast episodes, or working with Descript for audio post-production.
 ---
 
-## What this skill does
+# Podcast Edit — Turn a Zoom Recording into a Polished Audio Podcast
 
 Walks you through turning a raw Zoom interview recording into a polished audio podcast using Descript and the Descript API. You bring the recording; this skill handles the editorial workflow — from cleanup through final assembly.
 
 The result is a complete podcast episode with intro music, pull quotes, a beat bridge, the edited interview, and an outro.
 
----
+For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
 
 ## Instructions for the AI
 
 You are guiding a podcast producer through a structured editing workflow. All editorial decisions are made from the **transcript** — you cannot hear audio. That means every cut point needs human confirmation with surrounding context shown.
 
-The workflow is sequential and non-destructive by default. Filler words are ignored (muted), never deleted. Destructive cuts happen only in a duplicated composition, never the original. Always show 10–15 words of transcript context around a proposed cut point and get approval before proceeding.
+The workflow is sequential and non-destructive by default. Filler words are ignored (muted), never deleted. Destructive cuts happen only in a duplicated composition, never the original. Always show 10-15 words of transcript context around a proposed cut point and get approval before proceeding.
 
-> The Descript API is early access and actively evolving. This skill describes **intent** — what to do and when. Your MCP connection handles **how** — exact parameters, error handling, and polling. If anything has changed, [docs.descriptapi.com](https://docs.descriptapi.com/) is the source of truth.
-
-**After every `prompt_project_agent` call:** Poll `GET /jobs/{job_id}` (via `get_job`) until `job_state` is `"stopped"` and check `result.status` for `"success"` or `"error"` before proceeding.
+**After every `prompt_project_agent` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `references/descript-api.md` for details.
 
 ---
 
@@ -198,32 +193,14 @@ This skill was built around the Game Thinking VIP interview format, but the work
 
 ---
 
-## Known API limitations
+## Limitations
 
-| Limitation | Workaround |
-|-----------|-----------|
-| **Shared media library** — the API cannot import files from the drive-level shared media library | User manually drags files into the project's media panel |
-| **Volume ramps / gain envelopes** — no API support for fade curves | Draw manually in Descript's desktop app |
-| **Audio playback** — Claude cannot listen to audio | All decisions are transcript-based; manual review required for audio quality |
-| **Google Drive imports** — requires auth Descript can't satisfy | Use Dropbox with `dl=1` links, or upload directly |
-| **composition_id** — targeting a specific composition is work-in-progress | Target by `project_id` and describe the composition by name in the prompt |
-| **Agent is one-shot** — no multi-turn conversation | Frame each instruction as a complete, self-contained request |
-
-These limitations reflect the API as of early 2026. Check [docs.descriptapi.com](https://docs.descriptapi.com/) for the latest capabilities — as the API evolves, some of these workarounds may no longer be necessary.
-
----
-
-## What this skill does NOT do
-
-- It does not play or listen to audio. All editorial decisions are transcript-based.
-- It does not automate volume envelopes or crossfades. Those require manual work in Descript.
-- It does not import media from shared libraries or Google Drive. The user handles file management.
-- It does not make creative judgment calls about what sounds good. It proposes; you decide.
+- Claude cannot play or listen to audio. All editorial decisions are transcript-based.
+- Volume envelopes and crossfades require manual work in Descript desktop app.
+- See `references/descript-api.md` for full API limitations and workarounds.
 
 ---
 
 ## Source
 
-Based on the podcast editing workflow created by [Scott Kim](mailto:scott@scottkim.com) for the [Game Thinking TV](http://youtube.com/c/gamethinkingtv) YouTube channel. Scott built the original skill to edit Game Thinking VIP Zoom interviews into audio podcasts using Descript and the Descript API.
-
-Descript API references reflect the product as of early 2026; see [docs.descriptapi.com](https://docs.descriptapi.com/) for the latest.
+Based on the podcast editing workflow created by [Scott Kim](mailto:scott@scottkim.com) for the [Game Thinking TV](http://youtube.com/c/gamethinkingtv) YouTube channel.

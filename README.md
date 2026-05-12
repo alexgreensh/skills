@@ -6,11 +6,12 @@ A collection of AI skills for Descript users — interactive sessions you can ru
 
 ## What's in here
 
-| Series | Description | Episodes |
-|--------|-------------|----------|
-| [Ramdy Creator Bootcamp](./ramdy-creator-bootcamp/) | Launch a YouTube channel from scratch, following Ramdy's Creator Bootcamp curriculum | 7 (more coming) |
-| [Podcast Edit](./podcast-edit/) | Turn a Zoom interview recording into a polished audio podcast | 1 |
+| Skill | Description | Templates |
+|-------|-------------|-----------|
+| [Podcast Edit](./podcast-edit/) | Turn a Zoom interview recording into a polished audio podcast | 1 workflow |
+| [Blog Post Social Video](./blog-post-social-video/) | Turn any article into a 9:16 social video (30-60s) | 1 workflow |
 | [ASCII Video](./ascii-video/) | Generate ASCII art video and finish in Descript | 5 templates |
+| [Ramdy Creator Bootcamp](./ramdy-creator-bootcamp/) | Launch a YouTube channel from scratch, following Ramdy's Creator Bootcamp curriculum | 7 episodes |
 
 ---
 
@@ -18,15 +19,24 @@ A collection of AI skills for Descript users — interactive sessions you can ru
 
 ### With Claude Code
 
-Copy a skill file into your project's `.claude/commands/` directory (or your global `~/.claude/commands/`), then invoke it:
+Each skill folder contains a `SKILL.md` with frontmatter that Claude Code can discover and trigger automatically when installed as a plugin or placed in your commands directory.
 
-```
-/rcb-ep1-the-question
+```bash
+# Copy a skill folder into your commands directory
+cp -r podcast-edit ~/.claude/commands/
 ```
 
 ### With any other AI tool
 
-Open the `.md` file and paste its contents as a system prompt. Then work through the session with your AI assistant.
+Open the `SKILL.md` file and paste its contents as a system prompt. Then work through the session with your AI assistant.
+
+---
+
+## Shared references
+
+Skills that integrate with the Descript API share a common reference file:
+
+- **[`references/descript-api.md`](./references/descript-api.md)** — Auth setup, job polling, known limitations, and workarounds. Loaded by each Descript-integrated skill so the API knowledge stays in one place.
 
 ---
 
@@ -44,4 +54,4 @@ All API-enabled steps offer a manual fallback — you can always do the same thi
 
 ## Contributing
 
-New skill series welcome. Each series should live in its own subfolder with its own `README.md` following the conventions in this repo.
+New skill series welcome. Each series should live in its own subfolder with a `SKILL.md` (including YAML frontmatter with `name` and `description`) and its own `README.md`. Shared Descript API knowledge belongs in `references/descript-api.md` rather than duplicated per skill.

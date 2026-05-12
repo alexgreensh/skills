@@ -1,8 +1,15 @@
-# Blor/Article → Social Video (9:16, 30–60s) — V4.0
+---
+name: blog-post-social-video
+description: Turn any blog post or article into a polished 9:16 social video (30-60s) inside Descript. Handles scripting, brand setup, AI visual generation via Nano Banana Pro, Veo 3.1 animation, timeline assembly, captions, music, and mixing. Use this skill when creating social videos from articles, repurposing blog content for TikTok/Instagram/Shorts, or building branded short-form video content.
+---
+
+# Blog/Article to Social Video (9:16, 30-60s)
+
+For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
 
 ---
 
-## GLOBAL CONSTRAINTS (apply everywhere — do not override)
+## GLOBAL CONSTRAINTS (apply everywhere, do not override)
 
 **TEXT_FREE** — All AI-generated imagery (stills and video) must contain ZERO text: no words, letters, logos, signage, UI, subtitles, or watermarks. If any generated asset contains text, discard and regenerate until clean. This is a hard-fail condition.
 
