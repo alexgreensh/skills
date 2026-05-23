@@ -5,7 +5,7 @@ description: Turn any blog post or article into a polished 9:16 social video (30
 
 # Blog/Article to Social Video (9:16, 30-60s)
 
-For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
+For Descript API setup (auth, job polling, limitations), read `../references/descript-api.md`.
 
 ---
 

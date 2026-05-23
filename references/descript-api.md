@@ -27,7 +27,18 @@ Use a `callback_url` if you want a webhook instead of polling.
 
 ## Media import
 
-The Descript API does not currently support local file upload — media must be at a publicly accessible URL. Upload files to your cloud storage service (Dropbox, Google Drive, S3) and get a public URL before calling `import_media`.
+Two ways to get media into a project via the API:
+
+**URL import:** Pass a public or pre-signed URL in the `url` field. Descript fetches it server-side.
+
+**Direct file upload:** Pass `content_type` (MIME type) and `file_size` (bytes) instead of `url`. The response includes a signed `upload_url` (valid 3 hours). PUT the raw file bytes to that URL with `Content-Type: application/octet-stream`. The import job detects the upload and begins processing automatically.
+
+You can mix both methods in a single `import_media` request. Items with `url` are fetched server-side; items with `content_type` and `file_size` return signed upload URLs.
+
+**Direct upload flow:**
+1. Call `import_media` with `content_type` and `file_size` for each file
+2. PUT file bytes to each signed `upload_url` from the response
+3. Poll `get_job` until complete (same as URL imports)
 
 **Manual alternative:** Drag and drop files into your Descript project via the desktop app.
 
@@ -35,7 +46,6 @@ The Descript API does not currently support local file upload — media must be 
 
 | Limitation | Workaround |
 |-----------|-----------|
-| **No local file upload via API** | Upload to cloud storage, use public URL; or drag-and-drop into Descript desktop app |
 | **No volume ramps / gain envelopes** | Draw manually in Descript desktop app |
 | **Agent is one-shot** | Frame each instruction as a complete, self-contained request |
 | **composition_id is WIP** | Target by `project_id`, describe composition by name in prompt |

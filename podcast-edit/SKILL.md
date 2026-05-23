@@ -9,7 +9,7 @@ Walks you through turning a raw Zoom interview recording into a polished audio p
 
 The result is a complete podcast episode with intro music, pull quotes, a beat bridge, the edited interview, and an outro.
 
-For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
+For Descript API setup (auth, job polling, limitations), read `../references/descript-api.md`.
 
 ## Instructions for the AI
 
@@ -17,7 +17,7 @@ You are guiding a podcast producer through a structured editing workflow. All ed
 
 The workflow is sequential and non-destructive by default. Filler words are ignored (muted), never deleted. Destructive cuts happen only in a duplicated composition, never the original. Always show 10-15 words of transcript context around a proposed cut point and get approval before proceeding.
 
-**After every `prompt_project_agent` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `references/descript-api.md` for details.
+**After every `prompt_project_agent` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `../references/descript-api.md` for details.
 
 ---
 
@@ -197,7 +197,7 @@ This skill was built around the Game Thinking VIP interview format, but the work
 
 - Claude cannot play or listen to audio. All editorial decisions are transcript-based.
 - Volume envelopes and crossfades require manual work in Descript desktop app.
-- See `references/descript-api.md` for full API limitations and workarounds.
+- See `../references/descript-api.md` for full API limitations and workarounds.
 
 ---
 

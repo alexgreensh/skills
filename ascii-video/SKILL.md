@@ -7,7 +7,7 @@ description: Generate colored ASCII art video using a Python renderer and finish
 
 A coding agent writes a bespoke Python renderer that outputs colored ASCII art as real MP4 video. You pick a template (music visualizer, intro bumper, social clip, lyric video, product launch), answer a few creative questions, and the agent generates the video from scratch. Then you import it into Descript for finishing.
 
-For Descript API setup (auth, job polling, limitations), read `references/descript-api.md`.
+For Descript API setup (auth, job polling, limitations), read `../references/descript-api.md`.
 
 ## Instructions for the AI
 
@@ -17,7 +17,7 @@ The video generation step involves writing a single-file Python renderer from sc
 
 After rendering, the video is imported into Descript for post-production: captions, music, voiceover, and export.
 
-**After every `prompt_project_agent` or `import_media` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `references/descript-api.md` for details.
+**After every `prompt_project_agent` or `import_media` call:** Poll `get_job` until `job_state` is `"stopped"` and check `result.status` before proceeding. See `../references/descript-api.md` for details.
 
 ---
 
@@ -160,7 +160,7 @@ Note any steps that require manual attention in the Descript desktop app (the re
 ## Limitations
 
 - Claude cannot see or preview video. The user must watch renders to judge visual quality.
-- See `references/descript-api.md` for full API limitations and workarounds.
+- See `../references/descript-api.md` for full API limitations and workarounds.
 
 ---
 
