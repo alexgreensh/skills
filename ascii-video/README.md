@@ -8,10 +8,17 @@ An AI skill that generates colored ASCII art video using a Python renderer and f
 
 ### With Claude Code
 
-Copy this skill folder into your commands directory:
+Clone the full repo (recommended) so the shared `references/` folder is included:
 
 ```bash
-cp -r ascii-video ~/.claude/commands/
+git clone https://github.com/descriptinc/skills.git ~/.claude/commands/descript-skills
+```
+
+Or copy this skill folder along with the shared references:
+
+```bash
+cp -r ascii-video ~/.claude/commands/descript-skills/ascii-video
+cp -r references  ~/.claude/commands/descript-skills/references
 ```
 
 The `SKILL.md` frontmatter lets Claude Code discover and trigger the skill automatically.

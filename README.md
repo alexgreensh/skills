@@ -19,16 +19,26 @@ A collection of AI skills for Descript users — interactive sessions you can ru
 
 ### With Claude Code
 
-Each skill folder contains a `SKILL.md` with frontmatter that Claude Code can discover and trigger automatically when installed as a plugin or placed in your commands directory.
+Each skill folder contains a `SKILL.md` with frontmatter that Claude Code can discover and trigger automatically when placed in your commands directory.
+
+**Install the full repo (recommended):**
 
 ```bash
-# Copy a skill folder into your commands directory
-cp -r podcast-edit ~/.claude/commands/
+git clone https://github.com/descriptinc/skills.git ~/.claude/commands/descript-skills
+```
+
+This keeps the shared `references/` folder alongside every skill so all relative paths resolve correctly.
+
+**Install a single skill:** if you only want one skill, copy its folder and the shared `references/` folder together:
+
+```bash
+cp -r podcast-edit ~/.claude/commands/descript-skills/podcast-edit
+cp -r references  ~/.claude/commands/descript-skills/references
 ```
 
 ### With any other AI tool
 
-Open the `SKILL.md` file and paste its contents as a system prompt. Then work through the session with your AI assistant.
+Open the `SKILL.md` file and paste its contents as a system prompt. Include the contents of `references/descript-api.md` for any Descript API-integrated skill. Then work through the session with your AI assistant.
 
 ---
 
